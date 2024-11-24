@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.slider-wrapper .slider-item {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/*Available at: https://i.pinimg.com/originals/30/88/02/3088026038c7362ba6e0a41a123d395d.jpg (Accessed 21 November 2024).*/
+.slider-wrapper .slider-item::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(20%);
+    background-image: url("static/img-1.png");
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+
+}
+
+/*Available at: https://wallpapercave.com/wp/wp6186382.jpg (Accessed 21 November 2024).*/
+.slider-wrapper .slider-item:nth-child(2)::before {
+    background-image: url("static/img-2.jpg");
+}
+
+/*Available at: https://i.pinimg.com/736x/3f/49/e6/3f49e659d6a17c9dea56c8237f9659ad.jpg (Accessed 21 November 2024).*/
+.slider-wrapper .slider-item:nth-child(3)::before {
+    background-image: url("static/img-3.png");
+}
+
+/*Available at: https://i.pinimg.com/originals/2f/ae/df/2faedf9d1716a4577a3441ba688417b4.png (Accessed 21 November 2024).*/
+.slider-wrapper .slider-item:nth-child(4)::before {
+    background-image: url("static/img-4.png");
+}
+
+.slider-wrapper .slider-item .slide-content {
+    color: #fff;
+    z-index: 20;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px 10px;
+    max-width: 1400px;
+    position: relative;
+}
+
+.slider-wrapper .slider-item .slide-content > * {
+    max-width: 35%;
+}
+
+.slider-item .slide-content .slide-subtitle {
+    font-size: 2rem;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+.slider-item .slide-content .slide-title {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+.slider-item .slide-content .slide-description {
+    margin-top: 25px;
+    line-height: 30px;
+    font-size: 1.5rem;
+
+}
+
+.slider-item .slide-content .slide-button {
+    color: #fff;
+    width: 250px;
+    padding: 13px 0;
+    display: block;
+    margin-top: 45px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid #fff;
+    transition: 0.5s ease;
+}
+
+.slider-item .slide-content .slide-button:hover {
+    color: #000;
+    background: #fff;
+}
+
+.slider-container .slider-controls {
+    position: absolute;
+    bottom: 45px;
+    z-index: 20;
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.slider-controls .slider-pagination {
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1400px;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.slider-pagination .slider-indicator {
+    position: absolute;
+    bottom: 0;
+    border-bottom: 2px solid #fff;
+    transition: 0.4s ease-in-out;
+}
+
+.slider-pagination .slider-tab {
+    color: #000;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.9),  
+    0 0 20px rgba(255, 255, 255, 0.8),   
+    0 0 30px rgba(255, 255, 255, 0.7),   
+    0 0 40px rgba(255, 255, 255, 0.6),   
+    0 0 50px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 20px 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.slider-navigations button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #202022;
+    color: #fff;
+    z-index: 20;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    border: none;
+    transition: 0.4s ease;
+}
+
+.slider-navigations button.swiper-button-disabled {
+    display: none;
+}
+
+.slider-navigations button:hover {
+    background: #323235;
+}
+
+.slider-navigations button#slide-prev {
+    left: 20px;
+}
+
+.slider-navigations button#slide-next {
+    right: 20px;
+}
+
+@media (max-width: 1536px) {
+    .slider-wrapper .slider-item .slider-content, .slider-controls .slider-pagination {
+        width: 85%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .slider-wrapper .slider-item .slider-content, .slider-controls .slider-pagination {
+        width: 100%;
+    }
+
+    .slider-navigations button {
+        top: unset;
+        bottom: -15px;
+        background: none;
+    }
+
+    .slider-navigations button:hover {
+        background: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider-wrapper .slider-item .slide-content > * {
+        max-width: 100%;
+    }
+}
+
+.navbar {
+    font-family: 'Ninja Naruto', sans-serif;  
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    font-family: 'Ninja Naruto', sans-serif;  
+    list-style-type: none;
+    text-align: center;
+}
+
+.navbar ul li {
+    font-family: 'Ninja Naruto', sans-serif;  
+    display: inline-block;
+    margin: 0 20px;
+    font-size: 20px;
+    transition: all .6s ease;
+}
+
+.navbar ul li a {
+    font-family: 'Ninja Naruto', sans-serif;  
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    font-family: 'Ninja Naruto', sans-serif;  
+    color: #ff9d00
+}
+
+.scroll{
+    font-family: 'Ninja Naruto', sans-serif;  
+    position: absolute;
+    top: 92%;
+    right: 5%;
+    transform: translateY(-50%);
+    z-index: 1000
+}
+
+.scroll a{
+    font-family: 'Ninja Naruto', sans-serif;  
+    font-size: 16px;
+    color: #fff;
+    z-index: 1000
+}
+
+.scroll i{
+    font-family: 'Ninja Naruto', sans-serif;  
+    font-size: 20px;
+    color: #fff;
+    margin-right: 6px;
+    z-index: 1000
+}
+
+.scroll-back{
+    font-family: 'Ninja Naruto', sans-serif;  
+    position: absolute;
+    top: 92%;
+    left: 5%;
+    transform: translateY(-50%);
+    z-index: 1000
+}
+
+.scroll-back a{
+    font-family: 'Ninja Naruto', sans-serif;  
+    font-size: 16px;
+    color: #000;
+    z-index: 1000
+}
+
+.scroll-back i{
+    font-family: 'Ninja Naruto', sans-serif;  
+    font-size: 20px;
+    color: #fff;
+    margin-right: 6px;
+    z-index: 1000
+}

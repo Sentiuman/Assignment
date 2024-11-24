@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>Naruto Games</title>
+        <link rel="stylesheet" href="game.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+    </head>
+    <body>
+        <section class="header">
+            
+            <video autoplay loop muted>
+                <source src="static/naruto.mp4.mp4" type="video/mp4">
+            </video>
+
+            <nav>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu"></i>
+
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="characters.html">Team</a></li>
+                        <li><a href="mangas.html">Manga</a></li>
+                        <li><a href="games.html">Games</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+
+            <div class="text-box">
+                <h1>Welcome to the games section!</h1>
+                <p>Scroll down for more info</p>
+                <a href="https://naruto-official.com/en/game" class="hero-btn">Visit Us to know even more!</a>
+            </div>
+        </section>
+
+<!--- platforms ---->
+
+<section class="platforms">
+    <h1>Platforms Available</h1>
+    <div class="row">
+        <div class="platforms-col">
+            <h3>PC(Steam)</h3>
+        </div>
+        <div class="platforms-col">
+            <h3>PS4/PS5</h3>
+        </div>
+        <div class="platforms-col">
+            <h3>Xbox One/Xbox Series X|S</h3>
+        </div>
+        <div class="platforms-col">
+            <h3>IOS/Android</h3>
+        </div>
+        <div class="platforms-col">
+            <h3>Switch</h3>
+        </div>
+    </div>
+</section>
+
+<!-- Games Available -->
+
+<section class="GamesAvai">
+    <h1>Games Currently Available!</h1>
+    <div class="row">
+        <div class="GamesAvai-col">
+            <!--Available at: https://naruto.fandom.com/wiki/Naruto_x_Boruto:_Ultimate_Ninja_Storm_Connections (Accessed 24 November).-->
+            <img src="static/narutostormconnections.jpg">
+            <div class="layer">
+                <h3><a href="https://naruto.fandom.com/wiki/Naruto_x_Boruto:_Ultimate_Ninja_Storm_Connections">Naruto X Boruto: Ultimate Ninja Storm Connections</a></h3>
+            </div>
+        </div>
+        <div class="GamesAvai-col">
+            <!--Available at: https://naruto.fandom.com/wiki/Naruto_to_Boruto:_Shinobi_Striker (Accessed 24 November).-->
+            <img src="static/narutoshinobistriker.jpg">
+            <div class="layer">
+                <h3><a href="https://naruto.fandom.com/wiki/Naruto_to_Boruto:_Shinobi_Striker">Naruto to Boruto: Shinobi Striker</a></h3>
+            </div>
+        </div>
+        <div class="GamesAvai-col">
+            <!--Available at: https://naruto.fandom.com/wiki/Naruto_Shipp%C5%ABden:_Ultimate_Ninja_Storm_4 (Accessed 24 November).-->
+            <img src="static/narutostorm4.jpg">
+
+            <div class="layer">
+                <h3><a href="https://naruto.fandom.com/wiki/Naruto_Shipp%C5%ABden:_Ultimate_Ninja_Storm_4Naruto Shippuden: Ultimate Ninja Storm 4">Naruto Shippuden: Ultimate Ninja Storm 4</a></h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <script>
+
+            var navlinks = document.getElementById("navLinks");
+            function showMenu() {
+                navLinks.style.right = "0";
+            }
+
+            function hideMenu() {
+                navLinks.style.right = "-200px";
+            }
+
+        </script>
+
+    </body>
+</html>

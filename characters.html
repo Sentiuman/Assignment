@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Introducing the Team</title>
+        <link rel="stylesheet" href="character.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.cdnfonts.com/css/ninja-naruto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <!--Available at: https://www.w3schools.com/css/css_navbar.asp (Accessed 10 November 2024).-->
+        <nav class="navbar">
+            <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="characters.html">Team</a></li>
+            <li><a href="mangas.html">Manga</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="slider-container">
+            <div class="slider-wrapper swiper-wrapper">
+                <div class="slider-item swiper-slide">
+                    <div class="slide-content">
+                        <h3 class="slide-subtitle" data-aos="slide-down" data-aos-duration="1400" data-aos-delay="200">Team 7</h3>
+                        <h2 class="slide-title" data-aos="slide-right" data-aos-duration="1400" data-aos-delay="200">Naruto Uzumaki</h2>
+                        <p class="slide-description" data-aos="slide-left" data-aos-duration="1400" data-aos-delay="200">"And my future dream is to become The Hokage!"</p>
+                        <a href="https://naruto.fandom.com/wiki/Naruto_Uzumaki" class="slide-button" data-aos="fade-in" data-aos-duration="1400" data-aos-delay="200"><span>Learn More</span></a>
+                    </div>
+                </div>
+                <div class="slider-item swiper-slide">
+                    <div class="slide-content">
+                        <h3 class="slide-subtitle">Team 7</h3>
+                        <h2 class="slide-title">Sasuke Uchiha</h2>
+                        <p class="slide-description">"If that's how it is, I'll just have to sever that bond."</p>
+                        <a href="https://naruto.fandom.com/wiki/Sasuke_Uchiha" class="slide-button"><span>Learn More</span></a>
+                    </div>
+                </div>
+                <div class="slider-item swiper-slide">
+                    <div class="slide-content">
+                        <h3 class="slide-subtitle">Team 7</h3>
+                        <h2 class="slide-title">Sakura Haruno</h2>
+                        <p class="slide-description">"I've been through some harsh training, you know! I've gotten stronger, too!</p>
+                        <a href="https://naruto.fandom.com/wiki/Sakura_Haruno" class="slide-button"><span>Learn More</span></a>
+                    </div>
+                </div>
+                <div class="slider-item swiper-slide">
+                    <div class="slide-content">
+                        <h3 class="slide-subtitle">Team 7 (Captain)</h3>
+                        <h2 class="slide-title">Kakashi Hatake</h2>
+                        <p class="slide-description">"Those who don't have the decency to respect the memories of their comrades are the worst."</p>
+                        <a href="https://naruto.fandom.com/wiki/Kakashi_Hatake" class="slide-button"><span>Learn More</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls" data-aos="slide-left" data-aos-duration="1400" data-aos-delay="200">
+                <ul class="slider-pagination">
+                    <div class="slider-indicator"></div>
+                    <li class="slider-tab">Naruto</li>
+                    <li class="slider-tab">Sasuke</li>
+                    <li class="slider-tab">Sakura</li>
+                    <li class="slider-tab">Kakashi</li>
+                </ul>
+            </div>
+
+            <div class="slider-navigations">
+                <!--Available at: https://www.w3schools.com/tags/tag_button.asp (Accessed 11 November 2024).-->
+                <button id="slide-prev"
+                 class="material-symbols-outlined">arrow_left_alt</button>
+                <button id="slide-next" 
+                class="material-symbols-outlined">arrow_right_alt</button>
+            </div>
+        </div>
+
+        <div class="scroll" data-aos="slide-up" data-aos-duration="1400" data-aos-delay="400">
+            <a href="mangas.html"><i class="ri-arrow-right-circle-line"></i></a>
+            <a href="mangas.html">Next Page</a>
+        </div>
+
+        <div class="scroll-back" data-aos="slide-down" data-aos-duration="1400" data-aos-delay="400">
+            <a href="index.html"><i class="ri-arrow-left-circle-line"></i></a>
+            <a href="index.html">Previous Page</a>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init({
+            offset:1,
+          });
+        </script>
+
+
+        <script src="script.js"></script>
+    </body>
+</html>
