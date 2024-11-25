@@ -31,7 +31,7 @@
     width: 100%;
     height: 100%;
     filter: grayscale(20%);
-    background-image: url("static/img-1.png");
+    background-image: url("img-1.png");
     background-position: center;
     background-size: cover;
     z-index: -1;
@@ -40,17 +40,17 @@
 
 /*Available at: https://wallpapercave.com/wp/wp6186382.jpg (Accessed 21 November 2024).*/
 .slider-wrapper .slider-item:nth-child(2)::before {
-    background-image: url("static/img-2.jpg");
+    background-image: url("img-2.jpg");
 }
 
 /*Available at: https://i.pinimg.com/736x/3f/49/e6/3f49e659d6a17c9dea56c8237f9659ad.jpg (Accessed 21 November 2024).*/
 .slider-wrapper .slider-item:nth-child(3)::before {
-    background-image: url("static/img-3.png");
+    background-image: url("img-3.png");
 }
 
 /*Available at: https://i.pinimg.com/originals/2f/ae/df/2faedf9d1716a4577a3441ba688417b4.png (Accessed 21 November 2024).*/
 .slider-wrapper .slider-item:nth-child(4)::before {
-    background-image: url("static/img-4.png");
+    background-image: url("img-4.png");
 }
 
 .slider-wrapper .slider-item .slide-content {
